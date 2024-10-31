@@ -48,13 +48,13 @@ jobs:
 
       - name: Get tag
         id: tag
-        uses: dawidd6/action-get-tag@v1
+        uses: ODINSHAN2/action-get-tag@v1
         with:
         # Optionally strip `v` prefix
           strip_v: false
 
       - name: Upload to release
-        uses: softprops/action-gh-release@v1
+        uses: ODINSHAN2s/action-gh-release@v1
         if: steps.build.outputs.status == 'success' && !cancelled()
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
